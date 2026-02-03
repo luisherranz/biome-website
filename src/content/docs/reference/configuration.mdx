@@ -829,6 +829,31 @@ Choose whether spaces should be added between brackets and inner values.
 
 > Default: `true`
 
+### `javascript.formatter.delimiterSpacing`
+
+Whether to insert spaces inside delimiters. Affects parentheses `()`, square brackets `[]`, TypeScript angle brackets `<>`, and JSX curly braces `{}`.
+
+This option is available for JavaScript, JSON, and CSS. It is not available for GraphQL.
+
+> Default: `false`
+
+When enabled, the formatter transforms code like this:
+
+```diff
+-if (a) {}
++if ( a ) {}
+```
+
+```json title="biome.json"
+{
+  "javascript": {
+    "formatter": {
+      "delimiterSpacing": true
+    }
+  }
+}
+```
+
 ### `javascript.formatter.attributePosition`
 
 The attribute position style in jsx elements.
@@ -1039,6 +1064,29 @@ Choose whether spaces should be added between brackets and inner values.
 
 > Default: `true`
 
+### `json.formatter.delimiterSpacing`
+
+Whether to insert spaces inside square brackets `[]`.
+
+> Default: `false`
+
+When enabled, the formatter transforms code like this:
+
+```diff
+-[1, 2, 3]
++[ 1, 2, 3 ]
+```
+
+```json title="biome.json"
+{
+  "json": {
+    "formatter": {
+      "delimiterSpacing": true
+    }
+  }
+}
+```
+
 ### `json.formatter.expand`
 
 Whether to expand arrays and objects on multiple lines.
@@ -1165,6 +1213,34 @@ The amount of characters that can be written on a single line in CSS files.
 The type of quote used when representing string literals. It can be `"single"` or `"double"`.
 
 > Default: `"double"`
+
+### `css.formatter.delimiterSpacing`
+
+Whether to insert spaces inside delimiters. Affects parentheses `()` and square brackets `[]`.
+
+> Default: `false`
+
+When enabled, the formatter transforms code like this:
+
+```diff
+-color: rgb(255, 0, 0);
++color: rgb( 255, 0, 0 );
+```
+
+```diff
+-[type="text"] { }
++[ type="text" ] { }
+```
+
+```json title="biome.json"
+{
+  "css": {
+    "formatter": {
+      "delimiterSpacing": true
+    }
+  }
+}
+```
 
 ### `css.linter.enabled`
 
