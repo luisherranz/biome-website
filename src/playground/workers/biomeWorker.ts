@@ -128,6 +128,7 @@ self.addEventListener("message", async (e) => {
 				arrowParentheses,
 				operatorLinebreak,
 				bracketSpacing,
+				delimiterSpacing,
 				bracketSameLine,
 				expand,
 				indentScriptAndStyle,
@@ -191,6 +192,7 @@ self.addEventListener("message", async (e) => {
 								? "before"
 								: "after",
 						bracketSpacing,
+						delimiterSpacing,
 						bracketSameLine,
 						attributePosition:
 							attributePosition === AttributePosition.Auto

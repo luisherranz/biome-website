@@ -635,6 +635,21 @@ Choose whether spaces should be added between brackets and inner values.
 
 > Default: `true`
 
+### `formatter.delimiterSpacing`
+
+Whether to insert spaces inside delimiters. Affects parentheses `()`, square brackets `[]`, TypeScript angle brackets `<>`, and JSX curly braces `{}`.
+
+This option is available for JavaScript, JSON, and CSS. It is not available for GraphQL.
+
+> Default: `false`
+
+When enabled, the formatter transforms code like this:
+
+```diff
+-if (a) {}
++if ( a ) {}
+```
+
 ### `formatter.expand`
 
 Whether to expand arrays and objects on multiple lines.
